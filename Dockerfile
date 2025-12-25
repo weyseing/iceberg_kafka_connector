@@ -1,5 +1,5 @@
 # base image
-FROM confluentinc/cp-server-connect-base:8.0.0
+FROM confluentinc/cp-server-connect-base:8.0.3
 
 # worker dir, user
 WORKDIR /connect/tools
