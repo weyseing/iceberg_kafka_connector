@@ -1,5 +1,5 @@
 # base image
-FROM confluentinc/cp-server-connect-base:8.0.3
+FROM confluentinc/cp-server-connect-base:7.9.0
 
 # worker dir, user
 WORKDIR /connect/tools
@@ -22,7 +22,7 @@ RUN ln -snf /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime && \
     echo Asia/Kuala_Lumpur > /etc/timezone
 
 # install connector plugins
-RUN confluent-hub install --no-prompt debezium/debezium-connector-mysql:3.1.2 && \
+RUN confluent-hub install --no-prompt debezium/debezium-connector-mysql:2.2.1&& \
     confluent-hub install --no-prompt confluentinc/connect-transforms:1.4.5 && \
     confluent-hub install --no-prompt iceberg/iceberg-kafka-connect:1.9.2
 
